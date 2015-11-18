@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Genetic Algorithm for Race Track</title>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <span>Genetic Algorithm which optimizes the acceleration around a given race track</span>
+    </div>
+
+    <div class="window">
+
+
+        <canvas id="trackCanvas"></canvas>
+        <canvas id="canvas"></canvas>
+
+
+        <div class="legend">
+            <span class="heading">LEGEND</span>
+            <div>
+                <span>Alive</span>
+                <span class="color-block" id="aliveColor"></span>
+            </div>
+            <div>
+                <span>Previous Best</span>
+                <span class="color-block" id="previousBestColor"></span>
+            </div>
+            <div>
+                <span>Exceeded Power Limit</span>
+                <span class="color-block" id="powerLimitColor"></span>
+            </div>
+            <div>
+                <span>Exceeded Velocity Limit</span>
+                <span class="color-block" id="velocityLimitColor"></span>
+            </div>
+            <div>
+                <span>Exceeded Lateral Force Limit</span>
+                <span class="color-block" id="lateralForceLimitColor"></span>
+            </div>
+        </div>
+
+
+        <div class="previous-bests-details">
+            <div class="heading">PREVIOUS BESTS DETAILS</div>
+            <div>
+                <span>Speed: </span>
+                <span class="float-right"> km/h</span>
+                <span class="float-right" id="previousBestsSpeed">--</span>
+            </div>
+            <div>
+                <span>Power: </span>
+                <span class="float-right">kW</span>
+                <span class="float-right" id="previousBestsPower">--</span>
+            </div>
+            <div>
+                <span>Acceleration: </span>
+                <span class="float-right">m/s^2</span>
+                <span class="float-right" id="previousBestsAcceleration">--</span>
+            </div>
+            <div>
+                <span>Distance: </span>
+                <span class="float-right">m</span>
+                <span class="float-right" id="previousBestsDistance">--</span>
+            </div>
+            <div class="last-div">
+                <span>Time: </span>
+                <span class="float-right">seconds</span>
+                <span class="float-right" id="previousBestsTime">--</span>
+            </div>
+        </div>
+
+
+        <div class="details-container">
+            <div class="details-box">
+                <div class="heading">SIMULATION DETAILS</div>
+                <div>
+                    <span>Simulation Speed: x</span>
+                    <input class="float-right" id="simulationSpeed" type="number" step="5">
+                </div>
+                <div class="last-div">
+                    <span>Track Distance: </span>
+                    <span class="float-right">m</span>
+                    <span class="float-right" id="simulationTrackDistance">--</span>
+                </div>
+            </div>
+
+            <div class="details-box">
+                <div class="heading">LATEST GENERATIONS DETAILS</div>
+                <div>
+                    <span>Generation:</span>
+                    <input class="float-right" id="maxGenerations" type="number" step="10">
+                    <span class="float-right">of</span>
+                    <span class="float-right" id="generation">--</span>
+                </div>
+                <div>
+                    <span>Population Size:</span>
+                    <input class="float-right" id="populationSize" type="number" step="10">
+                </div>
+                <div>
+                    <span>Keep Top: </span>
+                    <input class="float-right" id="keepTop" type="number" step="1">
+                </div>
+                <div>
+                    <span>Crossover Probability:</span>
+                    <input class="float-right" id="crossoverProbability" type="number" step="0.05">
+                </div>
+                <div>
+                    <span>Standard Mutation Probability:</span>
+                    <input class="float-right" id="standardMutationProbability" type="number" step="0.001">
+                </div>
+                <div>
+                    <span>Focused Mutation Probability:</span>
+                    <input class="float-right" id="focusedMutationProbability" type="number" step="0.05">
+                </div>
+                <div>
+                    <span>Exceeded Power Limit:</span>
+                    <span class="float-right" id="exceededPowerLimit">--</span>
+                </div>
+                <div>
+                    <span>Exceeded Lateral Force Limit:</span>
+                    <span class="float-right" id="exceededLateralForceLimit">--</span>
+                </div>
+                <div>
+                    <span>Exceeded Velocity Limit:</span>
+                    <span class="float-right" id="exceededVelocityLimit">--</span>
+                </div>
+                <div>
+                    <span>Lap Completed:</span>
+                    <span class="float-right" id="lapCompletedCount">--</span>
+                </div>
+                <div class="last-div">
+                    <span>Time Elapsed:</span>
+                    <span class="float-right">seconds</span>
+                    <span class="float-right" id="timeElapsed">--</span>
+                </div>
+            </div>
+
+            <div class="details-box">
+                <div class="heading">TOP PERFORMERS (HALL OF FAME)</div>
+                <div id="hallOfFame">
+                </div>
+            </div>
+
+            <div class="run details-box">
+                <button id="runButton" onclick="run()" type="button">START</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    
+    
+
+    <script src="js/general-functions.js"></script>
+    <script src="js/physics.js"></script>
+    <script src="js/track-points.js"></script>
+    <script src="js/load-track.js"></script>
+    <script src="js/genetic-algorithm.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

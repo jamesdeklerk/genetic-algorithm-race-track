@@ -1,0 +1,177 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    color: #f3f3f3;
+    font-size: 16px;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-weight: bold;
+    margin: 8px;
+    background-color: #212121;
+    width: 1000px;
+    height: 80px;
+    text-align: center;
+    align-content: center;
+    line-height: 75px;
+}
+
+.header span {
+    font-size: 24px;
+    border-bottom: 1px solid;
+}
+
+.window {
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    margin: 8px;
+    width: 1000px;
+    height: 800px;
+    background-color: #424242;
+}
+
+.details-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 350px;
+    height: 800px;
+    background-color: #212121;
+}
+
+canvas {
+    position: absolute;
+    top: 0px;
+    left: 350px;
+}
+
+.previous-bests-details {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    font-size: 16px;
+    background-color: #2f2f2f;
+    padding: 16px;
+    margin: 16px;
+    width: 250px;
+    overflow: hidden;
+}
+
+.previous-bests-details div {
+    margin-bottom: 8px;
+}
+
+.previous-bests-details .last-div {
+    margin-bottom: 0px;
+}
+
+.legend {
+    position: absolute;
+    right: 0px;
+    bottom: 197px;
+    font-size: 16px;
+    text-align: right;
+    padding: 16px;
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-left: 16px;
+    width: 250px;
+    overflow: hidden;
+}
+
+.legend .heading {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.legend div {
+    margin-bottom: 8px;
+}
+
+.legend .last-div {
+    margin-bottom: 0px;
+}
+
+.color-block {
+    display: inline-block;
+    margin-left: 4px;
+    margin-bottom: -2px;
+    width: 16px;
+    height: 16px;
+    background-color: #BDBDBD;
+    /*    border: 4px solid #BDBDBD;*/
+}
+
+.details-box {
+    position: relative;
+    float: left;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: #2f2f2f;
+    padding: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+    width: calc(100% - (16px * 4));
+    overflow: hidden;
+}
+
+.details-box div {
+    margin-bottom: 8px;
+}
+
+.details-box .last-div {
+    margin-bottom: 0px;
+}
+
+.details-box input {
+    background-color: transparent;
+    border: 0px;
+    width: 60px;
+    font-size: inherit;
+    color: #ff7d7d;
+    text-align: right;
+    margin-right: -16px;
+}
+
+#hallOfFame {
+    height: 173px;
+    overflow: auto;
+    margin-bottom: 0px;
+}
+
+.run {
+    text-align: center;
+}
+
+.run button {
+    font-weight: bold;
+    width: 200px;
+    padding: 8px;
+    border: 0px;
+    color: #212121;
+}
+
+.run button:hover {
+    background-color: #00e700;
+}
+
+.run button:active {
+    background-color: #008000;
+}
+
+.heading {
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+
+.float-right {
+    position: relative;
+    float: right;
+    margin-left: 4px;
+}
